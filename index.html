@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BASSLINE AUDIO</title>
+<style>
+body{margin:0;font-family:Arial;background:#050505;color:#fff}
+.topbar{background:#000;padding:10px;display:flex;justify-content:space-between;font-size:14px}
+.navbar{display:flex;justify-content:space-between;padding:15px;background:#000}
+.logo{font-weight:bold;font-size:24px}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:20px}
+.card{background:#111;padding:20px;border-radius:10px}
+.price{color:#f4c400;font-size:20px}
+button{padding:10px;border:none;border-radius:6px;cursor:pointer}
+.whatsapp{background:#1faa4b;color:#fff}
+.buy{background:#f4c400}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+<div>Johannesburg, South Africa 1710</div>
+<div>084 669 1458 / 062 489 1322</div>
+</div>
+
+<div class="navbar">
+<div class="logo">BASSLINE AUDIO</div>
+</div>
+
+<h1 style="padding:20px">Products</h1>
+
+<div class="products">
+
+<div class="card">
+<h3>Black Spider 25 000W 4CH Amplifier</h3>
+<div class="price">R2,500</div>
+<button class="buy">Buy Now</button>
+<button class="whatsapp" onclick="order('Black Spider 4CH','2500')">WhatsApp</button>
+</div>
+
+<div class="card">
+<h3>Black Spider 25 000W Monoblock</h3>
+<div class="price">R2,850</div>
+<button class="buy">Buy Now</button>
+<button class="whatsapp" onclick="order('Monoblock','2850')">WhatsApp</button>
+</div>
+
+<div class="card">
+<h3>Black Spider 6x9 Speakers</h3>
+<div class="price">R850</div>
+<button class="buy">Buy Now</button>
+<button class="whatsapp" onclick="order('Speakers','850')">WhatsApp</button>
+</div>
+
+</div>
+
+<script>
+function order(name,price){
+let msg=`Hi I want ${name} for R${price}`;
+window.open(`https://wa.me/27846691458?text=${encodeURIComponent(msg)}`);
+}
+</script>
+
+</body>
+</html>
